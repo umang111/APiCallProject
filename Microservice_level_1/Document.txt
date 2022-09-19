@@ -1,4 +1,63 @@
-1.User Service
-2. Post Service
-3. Comment Service
+json value for user-api
+
+http://localhost:9091/addUser
+
+{
+    "userName": "test",
+    "userEmailId": "ratesghav@gmail.com",
+    "password": "121234"
+}
+
+*********************************
+
+http://localhost:9091/getUseById/1
+
+**********************************
+
+http://localhost:9091/updateUser/1
+
+**********************************
+
+http://localhost:9091/deleteUser/3
+
+**********************************
+
+///////////////blog-post-api///////////////////////////
+
+http://localhost:9092/postBlog/{userId}
+
+{
+    "blogTitle":"what is javaScript",
+    "blogContent":"Java script is most popular language for web development"
+}
+
+**********************************
+
+http://localhost:9092/getBlogPost/3
+
+**********************************
+
+http://localhost:9092/getBlogByUserId/2
+
+\**********************************
+
+http://localhost:9092/updateBlogPost/3
+{
+    "blogTitle":"what is c",
+    "blogContent":"c is a most popular programming language"
+}
+
+**********************************
+
+http://localhost:9092/deleteBlogPost/3
+
+**********************************
+
+
+http://localhost:9093/addCommentOnPost/2/1
+http://localhost:9093/addCommentOnPost/{blogId}/{userId}
+
+{
+    "commentContent":"hey this is first comment on post 2"
+}
 
