@@ -1,0 +1,40 @@
+package com.catalog.app.controller;
+
+public class AllConfigurationnForEureka {
+
+**********************************************************************************	
+	<dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>${spring-cloud.version}</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+	</dependencies>
+</dependencyManagement>
+**********************************************************************************
+	
+**********************************************************************************
+<dependency>
+<groupId>org.springframework.cloud</groupId>
+<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+</dependency>
+**********************************************************************************
+
+**********************************************************************************
+<properties>
+<java.version>17</java.version>
+<spring-cloud.version>2021.0.0</spring-cloud.version>
+</properties>
+**********************************************************************************
+	
+**********************************************************************************	
+@EnableEurekaClient in main app first class of app
+**********************************************************************************
+	
+**********************************************************************************
+	spring.application.name=movie-catalog-service	 ""add this in properties file of client
+**********************************************************************************
+}
