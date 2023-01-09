@@ -1,0 +1,38 @@
+1. create a new project "configServer"
+1.2. add config-server dependancy also eureka
+
+2. create a file in github of configserver like this, "https://github.com/umang111/job-post-app-config"
+
+3.then add this in yml file.
+
+server:
+  port: 8085
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/umang111/job-post-app-config
+          clone-on-start: true
+          
+4.enable config server in mailapp  -> @EnableConfigServer
+
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+from client side which app will use it
+
+1. add this dependancy
+
+    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+
+spring:
+  config:
+    import: configserver:http://localhost:8085
+    
+2. remove common dependacy
