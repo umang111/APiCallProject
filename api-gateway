@@ -1,5 +1,5 @@
 1. create new project api-gateway
-2. Add thiese Dependancy 
+2. Add thiese Dependancy  //enable @EnableDiscoveryClient
 
 <dependency>
 			<groupId>org.springframework.boot</groupId>
